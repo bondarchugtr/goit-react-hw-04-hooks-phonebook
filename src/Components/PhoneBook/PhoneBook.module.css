@@ -1,0 +1,17 @@
+.Container {
+  margin-top: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 680px;
+}
+
+.Contacts__title {
+  text-align: center;
+  color: rgb(85, 64, 64);
+  text-shadow: 0 3px 3px rgb(153, 133, 102);
+}
+.Filter__text {
+  text-align: center;
+  font-size: 35px;
+  color: rgb(78, 62, 37);
+}

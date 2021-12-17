@@ -1,0 +1,34 @@
+.Contact__list {
+  text-align: center;
+  padding-left: 0;
+}
+
+.Contact__item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border: 1px solid rgb(84, 144, 192);
+  border-radius: 10px;
+  cursor: pointer;
+  color: rgb(49, 80, 53);
+  cursor: pointer;
+}
+.Contact__item:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+.Contact__item:focus,
+.Contact__item:hover {
+  background-color: burlywood;
+}
+.Button__remove {
+  border-radius: 10px;
+  border: 1px solid teal;
+  cursor: pointer;
+}
+
+.Button__remove:focus,
+.Button__remove:hover {
+  color: rgb(140, 226, 183);
+  background-color: rgb(121, 79, 79);
+}

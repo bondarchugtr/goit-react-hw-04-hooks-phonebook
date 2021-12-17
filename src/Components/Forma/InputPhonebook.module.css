@@ -1,0 +1,36 @@
+.Forma {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid royalblue;
+  background-color: rgb(102, 144, 184);
+  padding: 25px;
+}
+.Forma__input {
+  border-radius: 10px;
+  border: 1px solid rgb(117, 140, 218);
+  padding: 5px;
+}
+
+.Forma__input:focus,
+.Forma__input:hover {
+  border-color: blueviolet;
+}
+
+.nameinput {
+  margin-right: 10px;
+  margin-right: 15px;
+}
+
+.Button__form {
+  margin-top: 10px;
+  border-radius: 10px;
+  border: 1px solid teal;
+  padding: 5px;
+}
+.Button__form:hover,
+.Button__form:focus {
+  color: rgb(140, 226, 183);
+  background-color: rgb(121, 79, 79);
+  cursor: pointer;
+}
