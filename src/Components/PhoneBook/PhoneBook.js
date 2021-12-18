@@ -5,18 +5,10 @@ import ContactsList from "../PhoneContacts/PhoneContacts";
 import Filter from "../Filter/Filter";
 import s from "./PhoneBook.module.css";
 import { nanoid } from "nanoid";
+import useLocalStorage from "../hooks/hooksLocalStorage";
 function PhoneBook() {
-  const [contacts, setContacts] = useState(
-    window.localStorage.getItem("contacts") ?? ""
-  );
-
-  // window.localStorage.getItem("contacts") ?? ""
+  const [contacts, setContacts] = useLocalStorage("contacts", []);
   const [filter, setFilter] = useState("");
-
-  useEffect(() => {
-    window.localStorage.setItem("contacts", JSON.stringify(contacts));
-    console.log("object");
-  }, [contacts]);
 
   const onSubmit = (data) => {
     const contact = {
@@ -47,9 +39,10 @@ function PhoneBook() {
   };
 
   const normalizedFilter = filter.toLowerCase();
-  const visibleContacts = [contacts].filter((contact) =>
+  const visibleContacts = contacts.filter((contact) =>
     contact.name.toLowerCase().includes(normalizedFilter)
   );
+
   return (
     <>
       <div className={s.PhoneBookBlock}>
